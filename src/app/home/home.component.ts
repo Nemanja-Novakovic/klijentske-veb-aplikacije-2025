@@ -8,7 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-home',
-  imports: [JsonPipe, NgIf, NgFor, MatButtonModule, MatCardModule],
+  imports: [NgIf, NgFor, MatButtonModule, MatCardModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -20,5 +20,13 @@ export class HomeComponent {
     FlightService.getFlights(0,3)
       .then(rsp => this.flights = rsp.data.content)
       .catch((e: AxiosError) => this.error = `${e.code}: ${e.message}`)
+  }
+
+  public formateDate(iso: string){
+    return new Date(iso).toLocaleString('sr-RS')
+  }
+
+  public generateDestinationImage(dest: string){
+    return `https://img.pequla.com/destination/${dest.split(' ')[0].toLowerCase()}.jpg`
   }
 }
