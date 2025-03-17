@@ -13,7 +13,7 @@
         <img mat-card-image [src]="generateDestinationImage(flight.destination)" [alt]="flight.destination">
         <mat-card-content>
             <h1>{{flight.destination}}</h1>
-            <p>Scheduled at: {{formateDate(flight.scheduledAt)}}</p>
+            <p>Scheduled at: {{utils.formatDate(flight.scheduledAt)}}</p>
             <p>Flight number: {{flight.flightNumber}}</p>
             <p>Plain model: {{flight.plane}}</p>
         </mat-card-content>
@@ -30,12 +30,4 @@
     <pre> {{flights | json}} </pre> -->
 </div>
 
-<div *ngIf="!flights && !error" class="container">
-    <mat-card class="loading" appearance="outlined">
-        <mat-card-content>
-            <h1>Please wait!</h1>
-            <p>Processing data...</p>
-            <img mat-card-image src="/assets/loading_fidget_spiner.gif" alt="loadinfo gif" id="loading_ico" width="100px">
-        </mat-card-content>
-    </mat-card>
-</div>
+<app-loading *ngIf="!flights && !error"></app-loading>
