@@ -8,7 +8,7 @@ const client = axios.create({
     },
     validateStatus: (status: number) => {
         return status === 200
-        //Samo ako je 200 vreti response
+        //Samo ako je 200 vrati response
         //U ostalim slucajevima izbaci izuzetak
     }
 })
@@ -28,6 +28,6 @@ export class FlightService {
     }
 
     static async getFlightById(id: number) {
-        return axios.get(`/flight/${id}`)
+        return client.get(`/flight/${id}`)
     }
 }

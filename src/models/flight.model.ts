@@ -24,7 +24,7 @@ export interface FlightModel{
     }
     flightKey: string
     flightNumber: string
-    destination: string
+    destination: string 
     scheduledAt: string
     estimatedAt: null | string
     connectedType: string
