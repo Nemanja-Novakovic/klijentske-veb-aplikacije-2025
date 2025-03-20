@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FlightModel } from '../../models/flight.model';
 import { FlightService } from '../../services/flight.service';
 import { NgIf } from '@angular/common';
@@ -7,12 +7,12 @@ import { UtilsService } from '../../services/utils.service';
 import { LoadingComponent } from "../loading/loading.component";
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { MatButton } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { SafePipe } from "../safe.pipe";
 
 @Component({
   selector: 'app-details',
-  imports: [NgIf, LoadingComponent, MatCardModule, MatListModule, MatButton, SafePipe],
+  imports: [NgIf, LoadingComponent, MatCardModule, MatListModule, MatButtonModule, SafePipe],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
 })

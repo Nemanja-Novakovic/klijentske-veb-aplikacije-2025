@@ -5,7 +5,7 @@ body {
     color: #fff;
 }
 
-a{
+a {
     color: grey;
 }
 
@@ -14,33 +14,44 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.container{
+.container {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.example-card{
+.example-card {
     max-width: 400px;
 }
 
-.loading{
+.loading {
     text-align: center;
     width: 600px;
     height: 300px;
     align-items: center;
 }
 
-#loading_ico{
+#loading_ico {
     width: 70px;
     height: 70px;
     margin: 25px;
 }
 
-.wrapper{
+.wrapper {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
+}
+
+.auth-card {
+    max-width: 533px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.full-width{
+    width: 100%;
 }

@@ -14,7 +14,7 @@
                     <mat-list-item>Airplane Model: {{flight.plane}}</mat-list-item>
                     <mat-list-item>Gate:{{flight.gate}}</mat-list-item>
                     <mat-list-item>Terminal: {{flight.terminal}}</mat-list-item>
-                    <mat-list-item>Flight Tupe: {{flight.type.name}}</mat-list-item>
+                    <mat-list-item>Flight Type: {{flight.type.name}}</mat-list-item>
                 </mat-list>
             </mat-card-content>
             <mat-card-actions>
@@ -26,10 +26,18 @@
     </div>
     <div class="flight-content">
         <mat-card class="flight-map">
-            <iframe [src]="generateMapLink() | safe" width="1200" height="600"></iframe>
+            <iframe [src]="generateMapLink() | safe" width="1200" height="470" id="mapa"></iframe>
         </mat-card>
     </div>
 </div>
 
 
 <app-loading *ngIf="!flight" /> <!--  .MOZE I OVAKO BEZ ZATVARAJUCEG TAGA. -->
+
+
+
+
+
+
+
+
